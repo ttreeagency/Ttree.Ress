@@ -1,0 +1,14 @@
+{
+    "name": "ttree/ress",
+    "type": "typo3-flow-package",
+    "description": "Ttree Responsive Web Design with Server-Side Component",
+    "require": {
+        "typo3/flow": "*",
+        "mobiledetect/mobiledetectlib": "2.8.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Ttree\\Ress": "Classes"
+        }
+    }
+}
