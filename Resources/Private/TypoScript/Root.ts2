@@ -9,20 +9,20 @@ root {
 
 	mobile {
 		@position = 'before tablet'
-		condition = ${request.mobile &&  && Configuration.setting('Ttree.Ress.enable.mobile') == true}
+		condition = ${request.mobile && Configuration.setting('Ttree.Ress.enable.mobile') == true}
 		renderPath = '/mobile/page'
 	}
 
 	tabletLayout {
 		@position = 'before mobile'
 		layout = ${q(node).property('layout') != null && q(node).property('layout') != '' ? q(node).property('layout') : q(node).parents('[subpageLayout]').first().property('subpageLayout')}
-		condition = ${this.layout != null && this.layout != '' && request.tablet == true &&  && Configuration.setting('Ttree.Ress.enable.tablet') == true}
+		condition = ${this.layout != null && this.layout != '' && request.tablet == true && Configuration.setting('Ttree.Ress.enable.tablet') == true}
 		renderPath = ${'/tablet/' + this.layout}
 	}
 
 	tablet {
 		@position = 'before layout'
-		condition = ${request.tablet &&  && Configuration.setting('Ttree.Ress.enable.tablet') == true}
+		condition = ${request.tablet && Configuration.setting('Ttree.Ress.enable.tablet') == true}
 		renderPath = '/tablet/page'
 	}
 
