@@ -48,7 +48,13 @@ Change the template of a specific TypoScript object
 
 TODO
 
+Sponsors & Contributors
+=======================
+
+The development of this package is sponsored by ttree (ttree_).
+
 .. _SmashingMagazine01: http://www.smashingmagazine.com/2014/07/22/responsive-web-design-should-not-be-your-only-mobile-strategy/
 .. _SmashingMagazine02: http://www.smashingmagazine.com/2013/04/09/improve-mobile-support-with-server-side-enhanced-responsive-design/
 .. _Lukew01: http://www.lukew.com/ff/entry.asp?1392
 .. _MobileDetect: http://mobiledetect.net/
+.. _ttree: http://ttree.ch/
