@@ -15,16 +15,17 @@ use TYPO3\Flow\Annotations as Flow;
 /**
  * @license http://www.opensource.org/licenses/mit-license.html MIT License
  */
-interface MobileAwareActionRequestInterface {
+interface MobileAwareActionRequestInterface
+{
 
-	/**
-	 * @return boolean
-	 */
-	public function isMobile();
+    /**
+     * @return boolean
+     */
+    public function isMobile();
 
-	/**
-	 * @return boolean
-	 */
-	public function isTablet();
+    /**
+     * @return boolean
+     */
+    public function isTablet();
 
 }
