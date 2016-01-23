@@ -20,41 +20,45 @@ use TYPO3\Flow\Aop\JoinPointInterface;
  * @Flow\Introduce("class(TYPO3\Flow\Mvc\ActionRequest)", interfaceName="Ttree\Ress\Mvc\MobileAwareActionRequestInterface")
  * @Flow\Aspect
  */
-class ActionRequestAspect {
+class ActionRequestAspect
+{
 
-	/**
-	 * @var MobileDetect
-	 */
-	protected $mobileDetection = NULL;
+    /**
+     * @var MobileDetect
+     */
+    protected $mobileDetection = NULL;
 
-	public function initializeMobileDetection() {
-		$this->mobileDetection = new MobileDetect();
-	}
+    public function initializeMobileDetection()
+    {
+        $this->mobileDetection = new MobileDetect();
+    }
 
-	/**
-	 * @Flow\Around("method(TYPO3\Flow\Mvc\ActionRequest->isMobile())")
-	 * @param JoinPointInterface $joinPoint
-	 * @return boolean
-	 */
-	public function isMobile(JoinPointInterface $joinPoint) {
-		if ($this->mobileDetection === NULL) {
-			$this->initializeMobileDetection();
-		}
+    /**
+     * @Flow\Around("method(TYPO3\Flow\Mvc\ActionRequest->isMobile())")
+     * @param JoinPointInterface $joinPoint
+     * @return boolean
+     */
+    public function isMobile(JoinPointInterface $joinPoint)
+    {
+        if ($this->mobileDetection === NULL) {
+            $this->initializeMobileDetection();
+        }
 
-		return $this->mobileDetection->isMobile();
-	}
+        return $this->mobileDetection->isMobile();
+    }
 
-	/**
-	 * @Flow\Around("method(TYPO3\Flow\Mvc\ActionRequest->isTablet())")
-	 * @param JoinPointInterface $joinPoint
-	 * @return boolean
-	 */
-	public function isTablet(JoinPointInterface $joinPoint) {
-		if ($this->mobileDetection === NULL) {
-			$this->initializeMobileDetection();
-		}
+    /**
+     * @Flow\Around("method(TYPO3\Flow\Mvc\ActionRequest->isTablet())")
+     * @param JoinPointInterface $joinPoint
+     * @return boolean
+     */
+    public function isTablet(JoinPointInterface $joinPoint)
+    {
+        if ($this->mobileDetection === NULL) {
+            $this->initializeMobileDetection();
+        }
 
-		return $this->mobileDetection->isTablet();
-	}
+        return $this->mobileDetection->isTablet();
+    }
 
 }
