@@ -11,6 +11,6 @@ Neos:
         mobiledetect.mobiledetectlib:
           - 'Detection\\.*'
   Neos:
-    typoScript:
+    fusion:
       autoInclude:
         Ttree.Ress: true
