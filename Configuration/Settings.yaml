@@ -1,16 +1,5 @@
-
 Ttree:
   Ress:
     enable:
       mobile: true
       tablet: true
-Neos:
-  Flow:
-    object:
-      excludeClasses:
-        mobiledetect.mobiledetectlib:
-          - 'Detection\\.*'
-  Neos:
-    fusion:
-      autoInclude:
-        Ttree.Ress: true
