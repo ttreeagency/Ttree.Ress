@@ -4,14 +4,13 @@ Ttree:
     enable:
       mobile: true
       tablet: true
-TYPO3:
-  Neos:
-    typoScript:
-      autoInclude:
-        Ttree.Ress: true
 Neos:
   Flow:
     object:
       excludeClasses:
         mobiledetect.mobiledetectlib:
           - 'Detection\\.*'
+  Neos:
+    typoScript:
+      autoInclude:
+        Ttree.Ress: true
