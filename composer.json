@@ -2,13 +2,14 @@
     "name": "ttree/ress",
     "description": "Ttree Responsive Web Design with Server-Side Component",
     "type": "neos-package",
+    "license": "MIT",
     "require": {
         "neos/neos": "^3.0",
         "mobiledetect/mobiledetectlib": "2.8.*"
     },
     "autoload": {
         "psr-4": {
-            "Ttree\\Ress": "Classes"
+            "Ttree\\Ress\\": "Classes"
         }
     },
     "extra": {
