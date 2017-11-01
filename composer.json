@@ -1,9 +1,9 @@
 {
     "name": "ttree/ress",
-    "type": "typo3-flow-package",
     "description": "Ttree Responsive Web Design with Server-Side Component",
+    "type": "neos-package",
     "require": {
-        "typo3/flow": "*",
+        "neos/neos": "^3.0",
         "mobiledetect/mobiledetectlib": "2.8.*"
     },
     "autoload": {
@@ -12,6 +12,12 @@
         }
     },
     "extra": {
+        "neos": {
+          "package-key": "Ttree.Ress"
+        },
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        },
         "applied-flow-migrations": [
             "TYPO3.FLOW3-201201261636",
             "TYPO3.Fluid-201205031303",
