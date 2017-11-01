@@ -17,7 +17,6 @@ use Neos\Flow\Annotations as Flow;
  */
 interface MobileAwareActionRequestInterface
 {
-
     /**
      * @return boolean
      */
@@ -27,5 +26,4 @@ interface MobileAwareActionRequestInterface
      * @return boolean
      */
     public function isTablet();
-
 }

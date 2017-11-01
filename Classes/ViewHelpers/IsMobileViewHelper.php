@@ -13,21 +13,18 @@ namespace Ttree\Ress\ViewHelpers;
 use Neos\FluidAdaptor\Core\ViewHelper\AbstractConditionViewHelper;
 use Detection\MobileDetect;
 
-
 class IsMobileViewHelper extends AbstractConditionViewHelper
 {
-
     /**
      * @var MobileDetect
      */
-    protected $mobileDetection = NULL;
+    protected $mobileDetection = null;
 
     public function __construct()
     {
         parent::__construct();
 
         $this->mobileDetection = new MobileDetect();
-
     }
 
     public function render()

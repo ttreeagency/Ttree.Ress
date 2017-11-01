@@ -22,11 +22,10 @@ use Neos\Flow\Aop\JoinPointInterface;
  */
 class ActionRequestAspect
 {
-
     /**
      * @var MobileDetect
      */
-    protected $mobileDetection = NULL;
+    protected $mobileDetection = null;
 
     public function initializeMobileDetection()
     {
@@ -40,7 +39,7 @@ class ActionRequestAspect
      */
     public function isMobile(JoinPointInterface $joinPoint)
     {
-        if ($this->mobileDetection === NULL) {
+        if ($this->mobileDetection === null) {
             $this->initializeMobileDetection();
         }
 
@@ -54,11 +53,10 @@ class ActionRequestAspect
      */
     public function isTablet(JoinPointInterface $joinPoint)
     {
-        if ($this->mobileDetection === NULL) {
+        if ($this->mobileDetection === null) {
             $this->initializeMobileDetection();
         }
 
         return $this->mobileDetection->isTablet();
     }
-
 }
