@@ -7,7 +7,7 @@
         "mobiledetect/mobiledetectlib": "2.8.*"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Ttree\\Ress": "Classes"
         }
     },
