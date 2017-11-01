@@ -11,13 +11,13 @@ namespace Ttree\Ress\Aspect;
  *                                                                        */
 
 use Detection\MobileDetect;
-use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Flow\Aop\JoinPointInterface;
+use Neos\Flow\Annotations as Flow;
+use Neos\Flow\Aop\JoinPointInterface;
 
 /**
  * @license http://www.opensource.org/licenses/mit-license.html MIT License
  * @Flow\Scope("singleton")
- * @Flow\Introduce("class(TYPO3\Flow\Mvc\ActionRequest)", interfaceName="Ttree\Ress\Mvc\MobileAwareActionRequestInterface")
+ * @Flow\Introduce("class(Neos\Flow\Mvc\ActionRequest)", interfaceName="Ttree\Ress\Mvc\MobileAwareActionRequestInterface")
  * @Flow\Aspect
  */
 class ActionRequestAspect
@@ -34,7 +34,7 @@ class ActionRequestAspect
     }
 
     /**
-     * @Flow\Around("method(TYPO3\Flow\Mvc\ActionRequest->isMobile())")
+     * @Flow\Around("method(Neos\Flow\Mvc\ActionRequest->isMobile())")
      * @param JoinPointInterface $joinPoint
      * @return boolean
      */
@@ -48,7 +48,7 @@ class ActionRequestAspect
     }
 
     /**
-     * @Flow\Around("method(TYPO3\Flow\Mvc\ActionRequest->isTablet())")
+     * @Flow\Around("method(Neos\Flow\Mvc\ActionRequest->isTablet())")
      * @param JoinPointInterface $joinPoint
      * @return boolean
      */

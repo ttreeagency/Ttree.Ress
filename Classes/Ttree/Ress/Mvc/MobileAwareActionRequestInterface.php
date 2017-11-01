@@ -10,7 +10,7 @@ namespace Ttree\Ress\Mvc;
  * The TYPO3 project - inspiring people to share!                         *
  *                                                                        */
 
-use TYPO3\Flow\Annotations as Flow;
+use Neos\Flow\Annotations as Flow;
 
 /**
  * @license http://www.opensource.org/licenses/mit-license.html MIT License
